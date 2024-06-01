@@ -1,0 +1,5 @@
+version=4
+opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%@PACKAGE@-$1.tar.gz%,\
+      uversionmangle=s/(\d)[_\.\-\+]?(RC|rc|pre|dev|beta|alpha)[.]?(\d*)$/$1~$2$3/, \
+      dversionmangle=s/\+dfsg\d*$//,repacksuffix=+dfsg1" \
+  https://github.com/gabriel-vasile/mimetype/tags .*/v?(\d\S*)\.tar\.gz debian
