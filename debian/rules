@@ -1,4 +1,7 @@
 #!/usr/bin/make -f
 
+# Ubuntu mangles png files by default, which can break the testdata.
+export NO_PNG_PKG_MANGLE := 1
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang

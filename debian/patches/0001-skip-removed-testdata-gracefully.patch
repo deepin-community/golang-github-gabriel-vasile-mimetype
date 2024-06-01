@@ -1,0 +1,33 @@
+Description: Skip removed testdata files gracefully
+Author: Anthony Fok <foka@debian.org>
+Origin: vendor
+Forwarded: not-needed
+Last-Update: 2023-10-13
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/mimetype_test.go
++++ b/mimetype_test.go
+@@ -245,6 +245,11 @@
+ 		fileName := filepath.Join(testDataDir, fName)
+ 		f, err := os.Open(fileName)
+ 		if err != nil {
++			if strings.HasSuffix(err.Error(), "open "+fileName+": no such file or directory") {
++				t.Log(err.Error())
++				t.Log("(removed from Debian packaging)")
++				continue
++			}
+ 			t.Fatal(err)
+ 		}
+ 		data, err := io.ReadAll(f)
+@@ -338,6 +343,11 @@
+ 		fileName := filepath.Join(testDataDir, fName)
+ 		f, err := os.Open(fileName)
+ 		if err != nil {
++			if strings.HasSuffix(err.Error(), "open "+fileName+": no such file or directory") {
++				t.Log(err.Error())
++				t.Log("(removed from Debian packaging)")
++				continue
++			}
+ 			t.Fatal(err)
+ 		}
+ 		r := breakReader{

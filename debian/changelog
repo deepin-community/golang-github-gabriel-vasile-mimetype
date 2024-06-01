@@ -1,5 +1,83 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-gabriel-vasile-mimetype (1.4.4+dfsg1-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * New upstream version 1.4.4+dfsg1
+  * d/control: Bump standards version to 4.7.0 (no changes required).
+  * d/copyright: Add testdata/tar.issue464.tar.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Martin Dosch <martin@mdosch.de>  Fri, 24 May 2024 10:16:46 +0000
+
+golang-github-gabriel-vasile-mimetype (1.4.3+dfsg1-2) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.4.3+dfsg1
+  * d/patches: Update patch to work with newest upstream version.
+
+ -- Martin Dosch <martin@mdosch.de>  Fri, 13 Oct 2023 09:24:49 +0000
+
+golang-github-gabriel-vasile-mimetype (1.4.2+dfsg1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 1.4.2+dfsg1
+  * d/copyright: Add new tar files
+  * d/copyright: Add testdata/jxr.jxr
+
+ -- Martin Dosch <martin@mdosch.de>  Wed, 21 Jun 2023 17:06:34 +0000
+
+golang-github-gabriel-vasile-mimetype (1.4.1+dfsg1-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Anthony Fok ]
+  * Use dh-sequence-golang instead of dh-golang and --with=golang
+  * Bump to golang-any (>= 2:1.18~) to support fuzz tests
+
+  [ Shengjing Zhu ]
+  * Fix autopkgtest when installed testdata is mangled
+  * Update Standards-Version to 4.6.2 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 20 Jan 2023 13:19:44 +0800
+
+golang-github-gabriel-vasile-mimetype (1.4.1+dfsg1-1) unstable; urgency=medium
+
+  [ Martin Dosch ]
+  * New upstream release v1.4.1
+  * debian/copyright: Add new test data files to Gabriel Vasile copyright
+    section due to
+    https://github.com/gabriel-vasile/mimetype/blame/v1.4.1/CONTRIBUTING.md#L11-L12
+  * debian/lintian-overrides: Add square brackets.
+    See https://lists.debian.org/debian-devel/2022/06/msg00184.html
+
+  [ Anthony Fok ]
+  * Reorder fields in debian/control and debian/copyright
+  * Update dependency for CVE-2021-33194 as per go.mod; specifically,
+    golang-golang-x-net-dev (>= 1:0.0+git20220624.1bab6f3)
+  * Bump Standards-Version to 4.6.1 (no change)
+  * debian/source/lintian-overrides: Add square brackets,
+    and add override for testdata/html.svg.html
+
+ -- Anthony Fok <foka@debian.org>  Mon, 18 Jul 2022 19:52:45 -0600
+
+golang-github-gabriel-vasile-mimetype (1.4.0+dfsg1-2) unstable; urgency=medium
+
+  * Source-only upload for migration to testing
+
+ -- Anthony Fok <foka@debian.org>  Sun, 02 Jan 2022 17:32:56 -0700
+
+golang-github-gabriel-vasile-mimetype (1.4.0+dfsg1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #993709)
+  * Document testdata/* copyright information where possible,
+    and exclude testdata files otherwise.
+    Thanks to Thorsten Alteholz for the check-up and reminder!
+  * Revise debian/watch to handle +dfsg1 version suffix
+  * Add patch to skip removed testdata files gracefully
+  * Fix Lintian overrides
+
+ -- Anthony Fok <foka@debian.org>  Wed, 29 Dec 2021 20:10:44 -0700
+
+golang-github-gabriel-vasile-mimetype (1.3.1-1) UNRELEASED; urgency=medium
+
+  * Initial release attempt
+
+ -- Anthony Fok <foka@debian.org>  Sun, 05 Sep 2021 02:30:35 -0600

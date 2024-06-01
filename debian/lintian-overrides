@@ -1,0 +1,9 @@
+# testdata files used for testing MIME types and extensions
+executable-not-elf-or-script [usr/share/gocode/src/github.com/gabriel-vasile/mimetype/testdata/odc.odc]
+national-encoding [usr/share/gocode/src/github.com/gabriel-vasile/mimetype/testdata/utf16*ebom.txt]
+privacy-breach-generic * [usr/share/gocode/src/github.com/gabriel-vasile/mimetype/testdata/html*.html]
+privacy-breach-google-adsense * [usr/share/gocode/src/github.com/gabriel-vasile/mimetype/testdata/html.iso88591.html]
+privacy-breach-uses-embedded-file * [usr/share/gocode/src/github.com/gabriel-vasile/mimetype/testdata/html.iso88591.html]
+script-not-executable [usr/share/gocode/src/github.com/gabriel-vasile/mimetype/testdata/*]
+unusual-interpreter /usr/bin/python [usr/share/gocode/src/github.com/gabriel-vasile/mimetype/testdata/py.py]
+wrong-path-for-interpreter * [usr/share/gocode/src/github.com/gabriel-vasile/mimetype/testdata/js.js]
